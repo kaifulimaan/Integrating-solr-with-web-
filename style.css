@@ -1,0 +1,257 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #343a40;
+    margin-bottom: 8px;
+    font-size: 2.5rem;
+}
+
+header p {
+    color: #6c757d;
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: #6c757d;
+    font-size: 0.9rem;
+    border-top: 1px solid #dee2e6;
+}
+
+.search-container {
+    display: flex;
+    margin-bottom: 30px;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+#search-input {
+    flex-grow: 1;
+    padding: 14px 16px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+#search-button {
+    padding: 0 25px;
+    background-color: #4263eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+#search-button:hover {
+    background-color: #364fc7;
+}
+
+.suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #dee2e6;
+    border-top: none;
+    z-index: 10;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 6px 6px;
+}
+
+.suggestion-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.suggestion-item:hover {
+    background-color: #f8f9fa;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.content {
+    display: flex;
+    gap: 25px;
+}
+
+.filters {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.filter-section {
+    background: white;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    padding: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.filter-section h3 {
+    margin-top: 0;
+    color: #343a40;
+    font-size: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e9ecef;
+    margin-bottom: 12px;
+}
+
+.filter-option {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.filter-option input[type="radio"] {
+    margin: 0;
+    cursor: pointer;
+}
+
+.filter-option label {
+    margin-left: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #495057;
+}
+
+.results {
+    flex-grow: 1;
+}
+
+.book-card {
+    background: white;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.book-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.book-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 8px;
+}
+
+.book-author {
+    color: #6c757d;
+    margin-bottom: 14px;
+    font-size: 15px;
+}
+
+.book-category {
+    display: inline-block;
+    background: #4263eb;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.book-published {
+    display: inline-block;
+    background: #40c057;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-left: 8px;
+    font-weight: 500;
+}
+
+.book-unpublished {
+    display: inline-block;
+    background: #868e96;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-left: 8px;
+    font-weight: 500;
+}
+
+.book-id {
+    font-size: 12px;
+    color: #adb5bd;
+    margin-top: 12px;
+}
+
+.no-results {
+    padding: 30px;
+    text-align: center;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    color: #6c757d;
+    font-size: 16px;
+}
+
+.loading {
+    text-align: center;
+    padding: 30px;
+    color: #6c757d;
+    font-size: 16px;
+}
+
+#apply-filters-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4263eb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+    margin-top: 5px;
+}
+
+#apply-filters-button:hover {
+    background-color: #364fc7;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    
+    .filters {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
